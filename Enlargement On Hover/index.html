@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Aggrandissement hover</title>
+
+	<style type="text/css">
+		
+		body {
+			display: flex;
+			height: 100vh;
+			margin: 0;
+			font-family: "Sora", sans-serif;
+		}
+
+		div {
+			height: 100%;
+			width: calc(100% / 3);
+			cursor: pointer;
+			transition: width 750ms ease-in-out;
+			transition-delay: 250ms;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		div:nth-child(1) {
+			background: #485696;
+			color: white;
+		}
+
+		div:nth-child(2) {
+			background: #E7E7E7;
+			color: white;
+		}
+
+		div:nth-child(3) {
+			background: #F9C784;
+			color: white;
+		}
+
+		p {
+			text-align: center;
+			font-weight: 700;
+			transition: all 750ms ease-in-out;
+			transition-delay: 250ms;
+		}
+
+		div:hover {
+			width: 200%;
+		}
+
+		div:hover p {
+			transform: scale(4);
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<div>
+		<p>#1</p>
+	</div>
+	<div>
+		<p>#2</p>
+	</div>
+	<div>
+		<p>#3</p>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Search bar design</title>
+
+	<style type="text/css">
+		body {
+			margin: 0;
+			font-size: 4px;
+			background-color: purple;
+			height: 100vh;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.container {
+			position: relative;
+			height: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: blue;
+		}
+
+		input {
+			background-color: #fff;
+			border: 0;
+			width: 5vw;
+			font-size: 2vw;
+			padding: 1vw;
+			border: 0;
+			border-radius: 10vw;
+			position: absolute;
+			transition: width 0.3s ease;
+		}
+
+		button {
+			background-color: #fff;
+			width: 10vw;
+			font-size: 2vw;
+			padding: 1vw;
+			border: 0;
+			border-radius: 10vw;
+			cursor: pointer;
+			position: absolute;
+			transition: transform 0.3s ease;
+		}
+
+		input:focus, button:focus {
+			outline: 0;
+		}
+
+		.active input {
+			width: 13vw;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+
+		.active button {
+			transform: translateX(11vw);
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+			box-shadow: 0 0 1vw blueviolet;
+		}
+	</style>
+
+</head>
+<body>
+
+	<div class="container">
+		<input type="text" placeholder="Search here">
+		<button> Search</button>
+	</div>
+
+	<script type="text/javascript">
+		const input = document.querySelector("input");
+		const button = document.querySelector("button");
+		const container = document.querySelector(".container");
+		button.addEventListener("click",function(){ container.classList.toggle("active");});
+	</script>
+
+</body>
+</html>

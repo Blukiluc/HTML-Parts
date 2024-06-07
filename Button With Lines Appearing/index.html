@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Line Border Bottom</title>
+
+<style type="text/css">
+	#container {
+		position: absolute;
+		text-align: center;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.myButton {
+		font-size: 28px;
+		color: #2b2525;
+		transition: .3s ease;
+		cursor: pointer;
+		display: inline-block;
+		margin: .2em;
+	}
+
+	.myButton .topLine, .myButton .bottomLine {
+		height: 0.05em;
+		background-color: #7eb3e0;
+		width: 100%;
+		transition: .3s ease;
+		visibility: hidden;
+	}
+
+	.myButton .topLine {
+		transform: translate(-1000px) scale(4,1);
+	}
+
+	.myButton .bottomLine {
+		transform: translate(1000px) scale(4.1);
+	}
+
+	.myButton .buttonText {
+		padding: .25em 1em .25em 1em;
+		font-family: sans-serif;
+	}
+
+	.myButton:hover >.topLine, .myButton:hover >.bottomLine {
+		visibility: visible;
+		transform: translate(0,0) scale(1,1);
+	}
+
+	.myButton:hover {
+		color: #537490;
+		transform: scale(1.25);
+	}
+
+	body {
+		display: flex;
+		min-height: 100%;
+		margin: 0;
+		align-items: center;
+		justify-content: center;
+		background-color: #ble3f7;
+		font-family: serif;
+	}
+</style>
+<script type="text/javascript">
+	function clicked(element) {
+		var text = element.getElementsByClassName("buttonText")[0].innerHTML;
+		console.log("You clicked " + text)
+	}
+</script>
+
+</head>
+<body>
+
+<div id="container">
+	<div class="myButton" onclick="clicked(this)">
+		<div class="topLine"></div>
+		<div class="buttonText">Button 1</div>
+		<div class="bottomLine"></div>
+	</div>
+	<br/>
+	<div class="myButton" onclick="clicked(this)">
+		<div class="topLine"></div>
+		<div class="buttonText">Button 2</div>
+		<div class="bottomLine"></div>
+	</div>
+	<br/>
+	<div class="myButton" onclick="clicked(this)">
+		<div class="topLine"></div>
+		<div class="buttonText">Button 3</div>
+		<div class="bottomLine"></div>
+	</div>
+	<br/>
+	<div class="myButton" onclick="clicked(this)">
+		<div class="topLine"></div>
+		<div class="buttonText">Button 4</div>
+		<div class="bottomLine"></div>
+	</div>
+</div>
+
+</body>
+</html>
